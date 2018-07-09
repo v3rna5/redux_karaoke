@@ -51,7 +51,6 @@ const renderLyrics = () => {
   // Adds text node created in line above to 'lyrics' div in DOM
   document.getElementById('lyrics').appendChild(renderedLine);
 }
-
 // runs renderLyrics() method from above when page is finished loading.
 // window.onload is HTML5 version of jQuery's $(document).ready()
 window.onload = function() {
@@ -60,4 +59,6 @@ window.onload = function() {
 // CLICK LISTENER
 const userClick = () => {
   console.log('click');
+  store.dispatch({ type: 'NEXT_LYRIC'} );
+  // console.log(store.getState());
 }
